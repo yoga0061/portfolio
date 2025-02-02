@@ -1,0 +1,67 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+.project-images img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.1);
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+/* Project Details */
+.project-details {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project-btn:hover {
+    background-color: #45a049;
+}
