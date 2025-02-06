@@ -136,6 +136,16 @@ header {
     border-radius: 8px;
 }
 
+/* Updated Team Photo Styling */
+.team-photo {
+    width: 100%; /* Responsive */
+    max-width: 250px; /* Adjust the size */
+    height: auto; /* Keep aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
 /* Skills and Languages Section Box Styling */
 #skills, #languages, #contact {
     padding: 20px;
