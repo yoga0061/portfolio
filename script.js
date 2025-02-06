@@ -1,15 +1,18 @@
-\document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const projectButtons = document.querySelectorAll(".project-btn");
 
     projectButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const projectId = button.getAttribute("data-project");
-            const details = document.getElementById(`project-${projectId}`);
+        button.addEventListener("click", function () {
+            const projectId = this.getAttribute("data-project");
+            const projectDetails = document.getElementById(`project-${projectId}`);
 
-            if (details.style.display === "none" || !details.style.display) {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
+            if (projectDetails) {
+                // Toggle visibility
+                if (projectDetails.style.display === "block") {
+                    projectDetails.style.display = "none";
+                } else {
+                    projectDetails.style.display = "block";
+                }
             }
         });
     });
