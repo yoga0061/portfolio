@@ -1,67 +1,172 @@
-/* Basic Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    height: 100%; /* Allow content to overflow */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: scroll; /* Ensure vertical scrolling */
+}
+
+/* General body settings */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #E0E0E0;
+    position: relative;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Add an overlay with glow effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    box-shadow: 0 0 30px rgba(255, 99, 71, 0.8);
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
     text-align: center;
+    padding: 40px;
+    background-color: rgba(51, 0, 0, 0.8);
+    color: white;
+    border-bottom: 5px solid #800000;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
 }
 
-h1 {
-    margin: 0;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+.profile-container {
+    margin-right: 20px;
 }
 
-.project-images img {
-    width: 200px;
-    height: auto;
-    margin: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.project-images img:hover {
-    transform: scale(1.1);
-}
-
-.profile-photo img {
-    width: 150px;
-    height: 150px;
+.profile-pic {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin: 10px 0;
+    border: 3px solid #E0E0E0;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Project Details */
-.project-details {
-    display: none; /* Initially hidden */
-    margin-top: 10px;
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.profile-pic:hover {
+    box-shadow: 0 0 25px rgba(255, 99, 71, 1), 0 0 35px rgba(255, 99, 71, 0.6);
+}
+
+.name-title h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+}
+
+.name-title p {
+    font-size: 18px;
+    text-shadow: 0 0 8px rgba(255, 99, 71, 0.6);
+}
+
+/* About Section */
+#about {
+    padding: 20px;
+    background-color: rgba(31, 31, 31, 0.8);
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #4B0000;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.6);
+}
+
+#about h2, #projects h2, #contact h2, #skills h2, #languages h2 {
+    color: #FF6347;
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+    background-color: rgba(31, 31, 31, 0.8);
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #4B0000;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.6);
+}
+
+.project {
+    margin-bottom: 20px;
 }
 
 .project-btn {
-    background-color: #4CAF50;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #8B0000;
     color: white;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .project-btn:hover {
-    background-color: #45a049;
+    background-color: #B22222;
+}
+
+.project-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.landslide-pic {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Skills and Languages Section Box Styling */
+#skills, #languages, #contact {
+    padding: 20px;
+    background-color: rgba(31, 31, 31, 0.8);
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid #4B0000;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.6);
+}
+
+#skills ul, #languages ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#skills li, #languages li {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 18px;
+    text-shadow: 0 0 8px rgba(255, 99, 71, 0.6);
+}
+
+#contact a {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
