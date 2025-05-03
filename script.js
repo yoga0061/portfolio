@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
+            contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
 
                 const formData = new FormData(contactForm);
@@ -293,18 +293,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Accept': 'application/json'
                     }
                 })
-                    .then(response => {
-                        if (response.ok) {
-                            alert('✅ Message sent! Thank you.');
-                            contactForm.reset();
-                        } else {
-                            alert('❌ There was a problem. Please try again.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('❌ Error sending message.');
-                    });
+                .then(response => {
+                    if (response.ok) {
+                        alert('✅ Message sent! Thank you.');
+                        contactForm.reset();
+                    } else {
+                        alert('❌ There was a problem. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ Error sending message.');
+                });
             });
         }
     }
