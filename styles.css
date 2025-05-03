@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #7A0026;
+    background-color: #7A0026; /* Vintage red background */
     color: #f8fafc;
     overflow-x: hidden;
 }
@@ -706,11 +706,6 @@ body {
 .social-link:hover {
     color: #e74c3c;
     transform: translateY(-3px);
-}
-
-.copyright {
-    color: #64748b;
-    font-size: 0.9rem;
 }
 
 /* Decorative Elements */
