@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     
     const typedCommand = document.getElementById('typed-command');
-    const text = "cd ~/Yoga's-portfolio";
+    const text = "cd ~/yoga's-portfolio";
     let charIndex = 0;
     
     // References to elements for animations
