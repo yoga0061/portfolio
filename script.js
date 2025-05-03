@@ -1,7 +1,8 @@
+
 // Loading Animation
 document.addEventListener('DOMContentLoaded', () => {
     const loadingContainer = document.getElementById('loading');
-
+    
     // Create the terminal-style elements
     loadingContainer.innerHTML = `
         <div class="terminal-text">
@@ -10,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="terminal-cursor"></span>
         </div>
     `;
-
+    
     const typedCommand = document.getElementById('typed-command');
-    const text = "cd ~/Yoga's-portfolio";
+    const text = "cd ~/vansh-portfolio";
     let charIndex = 0;
-
+    
     // References to elements for animations
     const navbar = document.getElementById('navbar');
     const mobileNav = document.getElementById('mobile-nav');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutContent = document.querySelector('.about-content');
     const skillsGrid = document.querySelector('.skills-grid');
     const projectsGrid = document.querySelector('.projects-grid');
+    const blogGrid = document.querySelector('.blog-grid');
     const contactContainer = document.querySelector('.contact-container');
 
     // Type out the command character by character
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }
     }
-
+    
     // Start typing after a short delay
     setTimeout(typeText, 500);
 
@@ -148,6 +150,19 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "power3.out"
         });
 
+        // Blog grid animation
+        gsap.to(blogGrid, {
+            scrollTrigger: {
+                trigger: blogGrid,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out"
+        });
+
         // Contact container animation
         gsap.to(contactContainer, {
             scrollTrigger: {
@@ -172,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 "color": {
-                    "value": "#e74c3c"
+                    "value": "#3b82f6"
                 },
                 "shape": {
                     "type": "circle",
@@ -207,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#e74c3c",
+                    "color": "#3b82f6",
                     "opacity": 0.4,
                     "width": 1
                 },
@@ -281,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
 
                 const formData = new FormData(contactForm);
@@ -293,18 +308,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Accept': 'application/json'
                     }
                 })
-                .then(response => {
-                    if (response.ok) {
-                        alert('✅ Message sent! Thank you.');
-                        contactForm.reset();
-                    } else {
-                        alert('❌ There was a problem. Please try again.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('❌ Error sending message.');
-                });
+                    .then(response => {
+                        if (response.ok) {
+                            alert('✅ Message sent! Thank you.');
+                            contactForm.reset();
+                        } else {
+                            alert('❌ There was a problem. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('❌ Error sending message.');
+                    });
             });
         }
     }
