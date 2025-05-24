@@ -402,11 +402,12 @@ body {
 }
 
 .skill-card {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    background: rgba(30, 41, 59, 0.7);
     border-radius: 16px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(59, 130, 246, 0.2);
+    text-align: center;
 }
 
 .skill-card:hover {
@@ -435,7 +436,7 @@ body {
 /* Certifications Section */
 .certifications-section {
     padding: 6rem 2rem;
-    background-color: rgba(30, 41, 59, 0.5);
+    background-color: #0f172a;
     position: relative;
 }
 
@@ -444,12 +445,63 @@ body {
     margin: 0 auto;
 }
 
-.certifications-grid {
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    color: #f8fafc;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+}
+
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    opacity: 1;
-    transform: translateY(0);
+}
+
+.skill-card {
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #3b82f6;
+}
+
+.skill-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f8fafc;
+}
+
+.skill-description {
+    color: #cbd5e1;
+    line-height: 1.6;
 }
 
 /* Projects Section */
