@@ -3,345 +3,679 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoganandha | Cybersecurity Student</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Yoganandha - Cybersecurity Student | Ethical Hacking | Network Security | Digital Forensics">
+    <title>Yoganandha | Cybersecurity Specialist</title>
+    
+    <!-- Preload resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="preload" href="./css/main.css" as="style">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loading-container" id="loading">
-        <div class="white-bg"></div>
-        <div class="dark-bg"></div>
-        <div class="loading-text" ref="loadingRef">
-            <span>Y</span>
-            <span>o</span>
-            <span>g</span>
-            <span>a</span>
-            <span>n</span>
-            <span>a</span>
-            <span>n</span>
-            <span>d</span>
-            <span>h</span>
-            <span>a</span>
-            <span>&nbsp;</span>
-            <span>w</span>
-            <span>e</span>
-            <span>b</span>
-            <span>s</span>
-            <span>i</span>
-            <span>t</span>
-            <span>e</span>
-        </div>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="brand">
-            <div class="logo">
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader__container">
+            <div class="preloader__logo">
+                <svg viewBox="0 0 100 100" class="preloader__svg">
+                    <path d="M50,10 L90,50 L50,90 L10,50 Z" class="preloader__path"></path>
+                </svg>
+            </div>
+            <div class="preloader__text">
                 <span>Y</span>
+                <span>O</span>
+                <span>G</span>
+                <span>A</span>
+                <span>N</span>
+                <span>A</span>
+                <span>N</span>
+                <span>D</span>
+                <span>H</span>
+                <span>A</span>
             </div>
-            <div class="brand-name">Yoganandha | Cybersecurity Student</div>
         </div>
-        <div class="nav-links">
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <!-- <a href="#blogs">Blogs</a> -->
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobile-nav">
-        <div class="mobile-nav-links">
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <!-- <a href="#blogs">Blogs</a> -->
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="main-container">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-bg">
-                <div id="particles-js"></div>
-                <div class="blob blob-1"></div>
-                <div class="blob blob-2"></div>
-            </div>
-            <h1 class="hero-title" id="hero-title">Hi, I'm Yoganandha</h1>
-            <p class="hero-subtitle" id="hero-subtitle">A cybersecurity student with a deep interest in protecting systems, data, and people in an increasingly connected world.</p>
-            <div class="cta-buttons" id="cta-buttons">
-                <a href="#projects" class="primary-btn">View My Work</a>
-                <a href="#contact" class="secondary-btn">Get In Touch</a>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./images/image.jpg" alt="Yoganandha's profile picture">
-                </div>
-                <div class="about-text">
-                    <p>Hi, I’m Yoganandha — a cybersecurity student with a deep interest in protecting systems, data, and people in an increasingly connected world. I’m passionate about understanding how technology works at a fundamental level and using that knowledge to build secure, resilient solutions.</p>
-
-                    <p>I enjoy exploring topics like ethical hacking, network security, and digital forensics. Whether I’m working on hands-on labs, studying vulnerabilities, or learning new security tools, I’m always driven by curiosity and a desire to make the digital space safer.</p>
-
-                    <p>For me, cybersecurity isn’t just a field — it’s a mission to defend, empower, and constantly adapt in the face of new challenges.</p>
-
-                    <a href="#contact" class="primary-btn">Let's Connect</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills-section" id="skills">
-            <div class="skills-container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <!-- Frontend Development -->
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="skill-title">Programming Languages</h3>
-                        <p class="skill-description">JavaScript, Java, Python, C</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-angle-down "></i>
-                        </div>
-                        <h3 class="skill-title">Frontend Development</h3>
-                        <p class="skill-description">HTML, CSS, React.js, Next.js, Tailwind CSS</p>
-                    </div>
-
-                    <!-- Backend Development -->
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="skill-title">Backend Development</h3>
-                        <p class="skill-description">Node.js etc</p>
-                    </div>
-
-                    <!-- Kali Linux -->
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-terminal"></i>
-                        </div>
-                        <h3 class="skill-title">Kali Linux</h3>
-                        <p class="skill-description">Proficient in using Kali Linux for penetration testing and security assessments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Projects Section -->
-        <section class="projects-section" id="projects">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-              <!-- Collab Board -->
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="./images/collab-board.jpg" alt="Collab Board">
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Collab Board</h3>
-                  <p class="project-description">
-                    A minimalist web app where people can post updates, share ideas, and connect with others—without the distractions of traditional social media. It's designed to be clean, simple, and focused on content—no likes, comments, or algorithms.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">FireBase</span>
-                    <span class="project-tag">React + Vite</span>
-                    <span class="project-tag">Firestore</span>
-                    <span class="project-tag">Authentication</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="https://snapji.netlify.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Running Link</a>
-                    <a href="https://github.com/yoga0061/collab-board" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Remote Access Trojan -->
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="./images/rat.jpg" alt="Remote Access Trojan">
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Remote Access Trojan</h3>
-                  <p class="project-description">
-                    Developed a Remote Access Trojan (RAT) in Python to simulate remote control over a system, featuring file access, command execution, and keylogging. Built for educational purposes to understand attacker techniques and strengthen cybersecurity defense strategies.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Cybersecurity</span>
-                    <span class="project-tag">Malware Analysis</span>
-                    <span class="project-tag">Network Security</span>
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">Reverse Engineering</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Running Link</a>
-                    <a href="https://github.com/yoga0061/RAT-BY-YOGA" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Landslide Detection through Raspberry Pi -->
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="./images/landslide.jpg" alt="Landslide Detection through Raspberry Pi">
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Landslide Detection through Raspberry Pi</h3>
-                  <p class="project-description">
-                    This project involves developing a system using Raspberry Pi to detect landslides in vulnerable areas. The system uses sensors to monitor soil moisture, vibration, and other environmental factors to predict and alert about potential landslides, helping to save lives and property.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Raspberry Pi</span>
-                    <span class="project-tag">IoT</span>
-                    <span class="project-tag">Sensors</span>
-                    <span class="project-tag">Python</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Running Link</a>
-                    <a href="https://github.com/yoga0061/Landslide" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                  </div>
-                </div>
-              </div>
-        
-                <!-- Salary Predictor Pro -->
-<div class="project-card">
-  <div class="project-image">
-    <img src="./images/salary.png" alt="Salary Predictor Pro">
-  </div>
-  <div class="project-content">
-    <h3 class="project-title">Salary Predictor Pro</h3>
-    <p class="project-description">
-      Salary Predictor Pro is a machine learning web app built with Streamlit that predicts an individual’s salary based on experience, education level, job title, and location. It simplifies career planning and income expectations with a user-friendly interface and real-time predictions.
-    </p>
-    <div class="project-tags">
-      <span class="project-tag">Python</span>
-      <span class="project-tag">Machine Learning</span>
-      <span class="project-tag">Streamlit</span>
-      <span class="project-tag">Pandas</span>
     </div>
-     <div class="project-links">
-                    <a href="https://ai-salary.streamlit.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Running Link</a>
-                    <a href="https://github.com/yoga0061/ai-salary-insights-dashboard" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Coming Soon Project -->
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="./images/comingsoon.jpg" alt="Coming Soon">
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Coming Soon</h3>
-                  <p class="project-description">
-                    Exciting new project in the works! Stay tuned for updates as we prepare to launch something innovative and impactful. More details coming soon!
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Innovation</span>
-                    <span class="project-tag">Development</span>
-                    <span class="project-tag">Technology</span>
-                  </div>
-                  <div class="project-links">
-                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Stay Tuned</a>
-                  </div>
-                </div>
-              </div>
+    <!-- Cursor Effects -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <span class="header__logo-icon">YB</span>
+                <span class="header__logo-text">Yoganandha</span>
+            </a>
+            
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#skills" class="header__nav-link">Skills</a></li>
+                    <li class="header__nav-item"><a href="#projects" class="header__nav-link">Projects</a></li>
+                    <li class="header__nav-item"><a href="#contact" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="header__menu-toggle" aria-label="Toggle menu">
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+                <span class="header__menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__background">
+            <div class="hero__particles" id="particles-js"></div>
+            <div class="hero__glow"></div>
+        </div>
+        
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="hero__title-line">Securing Digital</span>
+                <span class="hero__title-line">Frontiers</span>
+            </h1>
+            
+            <p class="hero__subtitle">
+                I'm Yoganandha, a cybersecurity student passionate about ethical hacking, 
+                network defense, and making the digital world safer.
+            </p>
+            
+            <div class="hero__buttons">
+                <a href="#projects" class="btn btn--primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn--secondary">
+                    <span>Contact Me</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
             </div>
-        </section>
+        </div>
+        
+        <a href="#about" class="hero__scroll" aria-label="Scroll down">
+            <div class="hero__scroll-icon">
+                <div class="hero__scroll-wheel"></div>
+            </div>
+            <span class="hero__scroll-text">Scroll Down</span>
+        </a>
+    </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="section__header">
+            <span class="section__subtitle">Get to know me</span>
+            <h2 class="section__title">About Me</h2>
+            <div class="section__divider"></div>
+        </div>
+        
+        <div class="about__container">
+            <div class="about__image">
+                <div class="about__image-wrapper">
+                    <img src="./assets/profile.jpg" alt="Yoganandha" loading="lazy" class="about__img">
+                    <div class="about__image-border"></div>
+                    <div class="about__image-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security Focused</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__info">
+                    <p class="about__text">
+                        As a dedicated cybersecurity student, I specialize in identifying vulnerabilities, 
+                        strengthening defenses, and understanding attacker methodologies to build more 
+                        secure systems. My approach combines technical skills with a hacker mindset.
+                    </p>
+                    
+                    <p class="about__text">
+                        Beyond formal education, I actively participate in CTF competitions, security 
+                        research, and open-source projects to continuously expand my knowledge in this 
+                        rapidly evolving field.
+                    </p>
+                    
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <span class="about__stat-number">50+</span>
+                            <span class="about__stat-label">Security Labs Completed</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">10+</span>
+                            <span class="about__stat-label">Projects Built</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">5</span>
+                            <span class="about__stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about__buttons">
+                    <a href="#contact" class="btn btn--primary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="btn btn--secondary" id="download-cv">
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="section__header">
+            <span class="section__subtitle">What I know</span>
+            <h2 class="section__title">My Skills</h2>
+            <div class="section__divider"></div>
+        </div>
+        
+        <div class="skills__container">
+            <div class="skills__tabs">
+                <button class="skills__tab active" data-tab="technical">Technical</button>
+                <button class="skills__tab" data-tab="security">Security</button>
+                <button class="skills__tab" data-tab="tools">Tools</button>
+            </div>
+            
+            <div class="skills__content active" data-content="technical">
+                <div class="skills__group">
+                    <h3 class="skills__category">Programming</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Python</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">JavaScript</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Java</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills__group">
+                    <h3 class="skills__category">Web Development</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">React</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Node.js</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills__content" data-content="security">
+                <div class="skills__group">
+                    <h3 class="skills__category">Security Domains</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Ethical Hacking</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Network Security</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Digital Forensics</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills__group">
+                    <h3 class="skills__category">Security Tools</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Kali Linux</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Metasploit</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills__content" data-content="tools">
+                <div class="skills__group">
+                    <h3 class="skills__category">Development Tools</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Git</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Docker</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills__group">
+                    <h3 class="skills__category">Security Tools</h3>
+                    <div class="skills__list">
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Wireshark</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <div class="skill__icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__name">Burp Suite</span>
+                                <div class="skill__progress">
+                                    <div class="skill__progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="section__header">
+            <span class="section__subtitle">My recent work</span>
+            <h2 class="section__title">Projects</h2>
+            <div class="section__divider"></div>
+        </div>
+        
+        <div class="projects__container">
+            <div class="projects__filter">
+                <button class="projects__filter-btn active" data-filter="all">All</button>
+                <button class="projects__filter-btn" data-filter="security">Security</button>
+                <button class="projects__filter-btn" data-filter="web">Web</button>
+                <button class="projects__filter-btn" data-filter="research">Research</button>
+            </div>
+            
+            <div class="projects__grid">
+                <!-- Project 1 -->
+                <div class="project" data-category="security">
+                    <div class="project__image">
+                        <img src="./assets/projects/collab-board.jpg" alt="Collab Board" loading="lazy">
+                        <div class="project__overlay">
+                            <div class="project__links">
+                                <a href="https://snapji.netlify.app/" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/yoga0061/collab-board" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Collab Board</h3>
+                        <p class="project__description">
+                            A minimalist web app for posting updates and sharing ideas without social media distractions.
+                        </p>
+                        <div class="project__tags">
+                            <span class="project__tag">Firebase</span>
+                            <span class="project__tag">React</span>
+                            <span class="project__tag">Firestore</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project" data-category="security">
+                    <div class="project__image">
+                        <img src="./assets/projects/rat.jpg" alt="Remote Access Trojan" loading="lazy">
+                        <div class="project__overlay">
+                            <div class="project__links">
+                                <a href="#" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/yoga0061/RAT-BY-YOGA" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Remote Access Trojan</h3>
+                        <p class="project__description">
+                            Educational RAT in Python simulating remote control for cybersecurity research.
+                        </p>
+                        <div class="project__tags">
+                            <span class="project__tag">Python</span>
+                            <span class="project__tag">Cybersecurity</span>
+                            <span class="project__tag">Malware</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project" data-category="research">
+                    <div class="project__image">
+                        <img src="./assets/projects/landslide.jpg" alt="Landslide Detection" loading="lazy">
+                        <div class="project__overlay">
+                            <div class="project__links">
+                                <a href="#" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/yoga0061/Landslide" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Landslide Detection</h3>
+                        <p class="project__description">
+                            Raspberry Pi system using sensors to detect potential landslides in vulnerable areas.
+                        </p>
+                        <div class="project__tags">
+                            <span class="project__tag">IoT</span>
+                            <span class="project__tag">Raspberry Pi</span>
+                            <span class="project__tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project" data-category="web">
+                    <div class="project__image">
+                        <img src="./assets/projects/salary-predictor.jpg" alt="Salary Predictor Pro" loading="lazy">
+                        <div class="project__overlay">
+                            <div class="project__links">
+                                <a href="https://ai-salary.streamlit.app/" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/yoga0061/ai-salary-insights-dashboard" class="project__link" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Salary Predictor Pro</h3>
+                        <p class="project__description">
+                            Machine learning web app that predicts salaries based on experience and job factors.
+                        </p>
+                        <div class="project__tags">
+                            <span class="project__tag">Machine Learning</span>
+                            <span class="project__tag">Streamlit</span>
+                            <span class="project__tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 - Coming Soon -->
+                <div class="project project--coming-soon" data-category="security">
+                    <div class="project__image">
+                        <img src="./assets/projects/coming-soon.jpg" alt="Coming Soon" loading="lazy">
+                        <div class="project__overlay">
+                            <span class="project__soon">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">New Security Project</h3>
+                        <p class="project__description">
+                            Exciting new cybersecurity project currently in development.
+                        </p>
+                        <div class="project__tags">
+                            <span class="project__tag">Cybersecurity</span>
+                            <span class="project__tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="section__header">
+            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title">Contact Me</h2>
+            <div class="section__divider"></div>
+        </div>
+        
+        <div class="contact__container">
+            <div class="contact__info">
+                <h3 class="contact__info-title">Let's talk about security</h3>
+                <p class="contact__info-text">
+                    Interested in discussing cybersecurity, potential collaborations, or just want to say hello? 
+                    Feel free to reach out through any of these channels.
+                </p>
+                
+                <div class="contact__info-items">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <p class="contact-label">Email</p>
-                        <p class="contact-value">
-                            <a href="mailto:yoga.142007@gmail.com">yoga.142007@gmail.com</a>
-                        </p>
+                        <div class="contact__info-content">
+                            <span class="contact__info-label">Email</span>
+                            <a href="mailto:yoga.142007@gmail.com" class="contact__info-value">yoga.142007@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <p class="contact-label">Phone</p>
-                        <p class="contact-value">
-                            <a href="tel:+916301883747">+91 6301883747</a>
-                        </p>
+                        <div class="contact__info-content">
+                            <span class="contact__info-label">Phone</span>
+                            <a href="tel:+916301883747" class="contact__info-value">+91 6301883747</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <p class="contact-label">Location</p>
-                        <p class="contact-value">Bengaluru, India</p>
+                        <div class="contact__info-content">
+                            <span class="contact__info-label">Location</span>
+                            <span class="contact__info-value">Bengaluru, India</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/mrbpndvg" method="POST">
-                        <div class="form-group">
-                          <label for="name" class="form-label">Name</label>
-                          <input type="text" id="name" name="name" class="form-input" required />
-                        </div>
-
-                        <div class="form-group">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" id="email" name="email" class="form-input" required />
-                        </div>
-
-                        <div class="form-group">
-                          <label for="subject" class="form-label">Subject</label>
-                          <input type="text" id="subject" name="subject" class="form-input" required />
-                        </div>
-
-                        <div class="form-group">
-                          <label for="message" class="form-label">Message</label>
-                          <textarea id="message" name="message" class="form-textarea" required></textarea>
-                        </div>
-
-                        <button type="submit" class="form-submit">Send Message</button>
-                      </form>
+                
+                <div class="contact__social">
+                    <a href="https://github.com/yoga0061" class="contact__social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yoganandha-banavathu-a02092305/" class="contact__social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/offx.yoga/" class="contact__social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-    </div>
+            
+            <form class="contact__form" id="contact-form" action="https://formspree.io/f/mrbpndvg" method="POST">
+                <div class="contact__form-group">
+                    <input type="text" name="name" class="contact__form-input" placeholder="Your Name" required>
+                </div>
+                
+                <div class="contact__form-group">
+                    <input type="email" name="email" class="contact__form-input" placeholder="Your Email" required>
+                </div>
+                
+                <div class="contact__form-group">
+                    <input type="text" name="subject" class="contact__form-input" placeholder="Subject" required>
+                </div>
+                
+                <div class="contact__form-group">
+                    <textarea name="message" class="contact__form-textarea" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn--primary contact__form-submit">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">Yoganandha | Cybersecurity Student</div>
-            <div class="footer-links">
-                <a href="#about" class="footer-link">About</a>
-                <a href="#skills" class="footer-link">Skills</a>
-                <a href="#projects" class="footer-link">Projects</a>
-                <!-- <a href="#blogs" class="footer-link">Blogs</a> -->
-                <a href="#contact" class="footer-link">Contact</a>
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">YB</a>
+                    <span class="footer__text">Yoganandha | Cybersecurity Specialist</span>
+                </div>
+                
+                <div class="footer__links">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+                        <li class="footer__item"><a href="#skills" class="footer__link">Skills</a></li>
+                        <li class="footer__item"><a href="#projects" class="footer__link">Projects</a></li>
+                        <li class="footer__item"><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/yoga0061" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yoganandha-banavathu-a02092305/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/offx.yoga/" class="social-link"><i class="fab fa-instagram"></i></a>
-                <!-- <a href="#" class="social-link"><i class="fab fa-instagram"></i></a> -->
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    &copy; <span id="year"></span> Yoganandha. All rights reserved.
+                </div>
+                
+                <div class="footer__credits">
+                    Made with <i class="fas fa-heart"></i> by Yoganandha
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
