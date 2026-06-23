@@ -308,7 +308,7 @@ npm run preview
 |----------|------|
 | 🔗 **LinkedIn** | [yoganandha-banavathu-a02092305](https://www.linkedin.com/in/yoganandha-banavathu-a02092305/) |
 | 🐙 **GitHub** | [yoga0061](https://github.com/yoga0061) |
-| 📧 **Email** | [yoganandha@example.com](mailto:yoganandha@example.com) |
+| 📧 **Email** | [yoganandha@example.com](mailto:naistam63@gmail.com) |
 | 🌐 **Portfolio** | [yoga0061.github.io/portfolio](https://yoga0061.github.io/portfolio/) |
 
 </div>
