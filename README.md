@@ -8,10 +8,10 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-00ff88?style=for-the-badge&logoColor=white)](https://yoga0061.github.io/portfolio/)
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-00ff88?style=for-the-badge&logoColor=white)](https://yoga-portfolio-61.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yoganandha-banavathu-a02092305/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yoga0061)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yoganandha@example.com)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:naistam63@gmail.com.com)
 
 </div>
 
